@@ -78,7 +78,7 @@ public class Stack<V> {
        sk.push(3);
        sk.push(4);
        sk.push(5);
-      sk.push("pradeep");
+      sk.push("pradeep new");
 
 
        sk.display();
