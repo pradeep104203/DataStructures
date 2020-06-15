@@ -105,8 +105,6 @@ public class DoubleLinkedList<T> {
         return false;
     }
 
-
-
     public void insertAfter(T data,T previous)
     {
         if(isEmpty())
@@ -172,7 +170,6 @@ public class DoubleLinkedList<T> {
         }
 
         }
-
 
     public void display(){
         if(size==0) {
