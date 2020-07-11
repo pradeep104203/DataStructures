@@ -1,6 +1,7 @@
 public class QueueUsingLinkedlist<T> {
     public int currentSize;
-    public int maxSize;
+    public T x;
+
     class Node
     {
         private T data;
@@ -10,11 +11,11 @@ public class QueueUsingLinkedlist<T> {
     Node front;
     Node rear;
 
-    QueueUsingLinkedlist(int maxSize)
+    QueueUsingLinkedlist()
     {
-        this.maxSize=maxSize;
-       this.front=null;
-       this.rear=null;
+
+        this.front=null;
+        this.rear=null;
         currentSize=0;
     }
 
@@ -24,11 +25,7 @@ public class QueueUsingLinkedlist<T> {
         return currentSize==0;
     }
 
-    public boolean isFull()
 
-    {
-        return currentSize==maxSize;
-    }
     public void display()
     {
 
@@ -79,35 +76,33 @@ public class QueueUsingLinkedlist<T> {
        System.out.println("queue is empty");
        else
        {
-          //x=front.data;
+           x= front.data;
           front=front.next;
           currentSize--;
        }
-       return front.data;
+       return x;
    }
 
 
     public static void main(String args[])
     {
-        Queue q=new Queue(5);
+        QueueUsingLinkedlist q=new QueueUsingLinkedlist();
         System.out.println("queue is empty  :::"+" "+q.isEmpty());
-        System.out.println("queue is full  :::"+" "+q.isFull());
-        System.out.println("maxsize is::"+" "+q.getMaxSize());
-        System.out.println("current size is ::"+" "+q.getCurrentSize());
 
-        q.enQueue(1);
-        q.enQueue(2);
-        q.enQueue(3);
-        q.enQueue(4);
-        q.enQueue(5);
+        q.enqueue(1);
+        q.enqueue(2);
+        q.enqueue(3);
+        q.enqueue(4);
+        q.enqueue(5);
+        q.enqueue(6);
         System.out.println("start of enqueue display");
         q.display();
         System.out.println("end of enqueue display");
 
         System.out.println("queue is empty  :::"+" "+q.isEmpty());
-        System.out.println("dequeued element is"+" "+q.deQueue());
+        System.out.println("dequeued element is"+" "+q.dequeue());
 
-        System.out.println("current size is ::"+" "+q.getCurrentSize());
+
         System.out.println("queue is empty  :::"+" "+q.isEmpty());
         System.out.println("start of dequeue display");
         q.display();
