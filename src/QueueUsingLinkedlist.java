@@ -83,7 +83,6 @@ public class QueueUsingLinkedlist<T> {
        return x;
    }
 
-
     public static void main(String args[])
     {
         QueueUsingLinkedlist q=new QueueUsingLinkedlist();
