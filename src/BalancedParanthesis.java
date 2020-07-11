@@ -49,7 +49,8 @@ public class BalancedParanthesis<T> {
         if(bps.balanced(s))
             System.out.println("balanced");
         else
-            System.out.println("not balanced");
+
+            System.out.println("not balanced   ");
 
     }
 }
